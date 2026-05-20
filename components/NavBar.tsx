@@ -78,7 +78,7 @@ export default function MagicalNavbar() {
           <div className="hidden md:flex">
             <button
               className="
-                px-5 py-2
+                px-7 py-2.5
                 rounded-full
                 bg-white
                 text-black

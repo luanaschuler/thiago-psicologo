@@ -13,51 +13,58 @@ export default function Hero() {
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover scale-103"
+        className="absolute inset-0 h-full w-full object-cover scale-102 opacity-90"
         src="/maybe_thiago.mp4"
       />
       <div className="absolute inset-0" />
       {/* Transição esbranquiçada e esfumada muito mais evidente */}
       <div className="absolute bottom-0 left-0 right-0 h-54 bg-gradient-to-t from-white/100 via-white/50 to-transparent pointer-events-none" />
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-end justify-end px-6 py-16">
-        <div className="grid gap-8 w-full lg:grid-cols-[1.1fr_1fr] items-end">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl h-[38rem]">
-            <Image
-              src="/joia3.jpeg"
-              alt="Atendimento psicológico"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-              priority
-            />
-          </div>
 
-          {/* Right: glass card que acompanha o título na parte inferior direita */}
-          <div className="flex items-end">
-            <div className="w-full max-w-2xl rounded-4xl bg-white/3 border border-[#94c5de]/10 p-6 backdrop-blur-2xl shadow-2xl flex flex-col justify-end">
-              <div className="flex-1" />
-              <div className="text-right">
-                <Image
-                  src="/Ativo_1.svg"
-                  alt="Logo"
-                  width={420}
-                  height={420}
-                  className="inline-block mb-4"
-                />
-                <h1 className="text-3xl md:text-4xl font-semibold text-[#0c2a3d] leading-tight font-family-[New Title]">
-                  Psicologia para saúde emocional, acolhimento e mudança real.
-                </h1>
-                <p className="mt-4 text-[#0c2a3d]/90 max-w-lg ml-auto">
-                  Um olhar profissional e humano para apoiar sua evolução com
-                  empatia e clareza.
-                </p>
-                <div className="mt-6 flex justify-end">
-                  <a
-                    href="#contato"
-                    className="inline-flex rounded-full bg-[#f1972e] px-6 py-3 text-sm font-semibold text-[#0c2a3d] transition hover:bg-[#d58224]"
-                  >
-                    Agendar sessão
-                  </a>
+      {/* Ajustado para alinhar todo o bloco do conteúdo na parte inferior (justify-end) */}
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-end justify-end px-6 pb-6 pt-32 lg:pt-0">
+        {/* O CARD GLASS (Achatado na parte inferior direita, py reduzido no desktop) */}
+        <div className="w-full rounded-4xl bg-white/3 border border-[#94c5de]/10 px-6 pb-6 pt-6 lg:pb-1 lg:pt-4 backdrop-blur-2xl shadow-2xl">
+          {/* items-end faz com que tanto a foto quanto o texto fiquem apoiados no "chão" do glass card */}
+          <div className="grid gap-8 w-full lg:grid-cols-[1.1fr_1fr] items-end">
+            {/* Coluna da Imagem com margem negativa no desktop para flutuar para fora pelo topo */}
+            <div className="relative overflow-hidden rounded-4xl shadow-xl w-full max-w-[320px] lg:max-w-[350px] h-auto lg:ml-8 z-10 mx-auto lg:mx-0 lg:-mt-24 transform lg:translate-y-0">
+              <Image
+                src="/joia3.jpeg"
+                alt="Atendimento psicológico"
+                width={450}
+                height={400}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="relative w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
+            {/* Coluna do Texto */}
+            <div className="flex items-end w-full">
+              <div className="w-full max-w-2xl flex flex-col justify-end">
+                <div className="text-right">
+                  <Image
+                    src="/Ativo_1.svg"
+                    alt="KEEPCALM"
+                    width={350}
+                    height={350}
+                    className="inline-block mb-2"
+                  />
+                  <h1 className="text-2xl md:text-3xl font-semibold text-[#0c2a3d] leading-tight font-family-[New Title]">
+                    Psicologia para saúde emocional, acolhimento e mudança real.
+                  </h1>
+                  <p className="mt-2 text-[#0c2a3d]/90 text-sm max-w-lg ml-auto">
+                    Um olhar profissional e humano para apoiar sua evolução com
+                    empatia e clareza.
+                  </p>
+                  <div className="mt-4 flex justify-end">
+                    <a
+                      href="#contato"
+                      className="inline-flex rounded-full bg-[#f1972e] px-5 py-2.5 text-sm font-semibold text-[#0c2a3d] transition hover:bg-[#d58224]"
+                    >
+                      Agendar sessão
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

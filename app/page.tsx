@@ -1,65 +1,57 @@
 import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import Hero from "@/components/Hero";
+import FeatureGrid from "@/components/FeatureGrid";
+import About from "@/components/About";
+import Blog from "@/components/Blog";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="overflow-x-hidden bg-slate-50 text-slate-950">
+      <NavBar />
+      <Hero />
+      <FeatureGrid />
+      <About />
+      <Blog />
+
+      <section className="relative py-24 bg-[#e5f3f1]/60">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-8 lg:grid-cols-[0.65fr_0.35fr] items-center rounded-4xl border border-[#94c5de]/30 bg-[url('https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center p-8 shadow-2xl">
+            <div className="rounded-4xl border border-[#94c5de]/20 bg-white/5 p-10 backdrop-blur-3xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
+                Conexão e acolhimento
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold text-[#0c2a3d]">
+                Um espaço para ver, ouvir e transformar.
+              </h2>
+              <p className="mt-6 text-[#0c2a3d]/90 leading-8">
+                Atendimento pensado para trazer clareza aos seus sentimentos e
+                criar uma rotina emocional mais tranquila.
+              </p>
+              <a
+                href="#contato"
+                className="mt-8 inline-flex rounded-full bg-[#f1972e] px-6 py-3 text-sm font-semibold text-[#0c2a3d] transition hover:bg-[#d58224]"
+              >
+                Quero agendar uma sessão
+              </a>
+            </div>
+            <div className="overflow-hidden rounded-4xl shadow-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=950&q=80"
+                alt="Psicólogo em atendimento"
+                width={950}
+                height={700}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <FAQ />
+      <Footer />
+    </main>
   );
 }

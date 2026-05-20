@@ -1,15 +1,78 @@
 @import "tailwindcss";
 
+/* Font Faces */
+@font-face {
+  font-family: "New Title";
+  src: url("/fonts/NewTitle-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Title";
+  src: url("/fonts/NewTitle-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Title";
+  src: url("/fonts/NewTitle-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Title";
+  src: url("/fonts/NewTitle-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Title";
+  src: url("/fonts/NewTitle-Extralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cartograph";
+  src: url("/fonts/Cartograph Mono CF Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cartograph";
+  src: url("/fonts/Cartograph Mono CF Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cartograph";
+  src: url("/fonts/Cartograph Mono CF Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e5f3f1;
+  --foreground: #0c2a3d;
+  --primary: #5c8fa6;
+  --secondary: #94c5de;
+  --accent: #f1972e;
+  --surface: #ffffff;
+  --font-title: "New Title", sans-serif;
+  --font-subtitle: "Cartograph", monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-title);
+  --font-mono: var(--font-subtitle);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +85,39 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-title);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Títulos com New Title */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+/* Subtítulos com Cartograph */
+p,
+span,
+a,
+li {
+  font-family: var(--font-subtitle);
+}
+
+/* Classes de utilidade */
+@layer components {
+  .font-title {
+    @apply font-sans;
+  }
+
+  .font-subtitle {
+    @apply font-mono;
+  }
 }

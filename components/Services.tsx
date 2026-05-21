@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Services() {
   return (
-    <section className="bg-gray-100 py-20">
+    <motion.section
+      className="bg-gray-100 py-20"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-semibold text-center mb-10">
           Meus Serviços
@@ -22,6 +32,6 @@ export default function Services() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

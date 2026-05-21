@@ -8,7 +8,7 @@ export default function Footer() {
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-10 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-lg font-semibold">Psicólogo</p>
+          <p className="text-lg font-semibold">Thiago Wanderweger</p>
           <p className="mt-2 max-w-md text-sm text-slate-400">
             Atendimento humanizado para seu crescimento emocional e bem-estar.
           </p>

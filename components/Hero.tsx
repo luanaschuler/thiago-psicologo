@@ -1,12 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section
+    <motion.section
       id="home"
       className="relative min-h-screen overflow-hidden bg-[#0c2a3d] text-white mt-6"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <video
         autoPlay
@@ -71,6 +76,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

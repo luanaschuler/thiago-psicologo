@@ -12,8 +12,7 @@ export default function About() {
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden py-24"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=1200&q=80')",
+        backgroundImage: "url('/amei3.jpeg')", // Substitua pelo caminho da sua imagem de fundo
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -25,27 +24,33 @@ export default function About() {
             <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
               Sobre mim
             </p>
-            <h2 className="text-4xl font-semibold leading-tight text-[#0c2a3d]">
+            <h2 className="text-4xl font-semibold leading-tight text-[#5c8fa6]">
               Eu apoio seu caminho para mais clareza e equilíbrio.
             </h2>
-            <p className="text-[#0c2a3d]/90 leading-8">
+            <p className="text-[background]/90 leading-8">
               Sou psicólogo com foco em atender pessoas que buscam reduzir
               ansiedade, melhorar relacionamentos e fortalecer o
               autoconhecimento.
             </p>
-            <p className="text-[#0c2a3d]/90 leading-8">
+            <p className="text-[background]/90 leading-8">
               Minhas sessões são planejadas para oferecer acolhimento e
               ferramentas práticas, para que você sinta mais confiança nas
               escolhas do dia a dia.
             </p>
+            <Image
+              src="/Ativo_20.svg"
+              alt="KEEPCALM"
+              width={350}
+              height={350}
+              className="inline-block mt-4"
+            />
           </div>
           <div className="flex items-center justify-center">
-            <div className="overflow-hidden rounded-4xl shadow-2xl border border-[#94c5de]/15 bg-white/5 backdrop-blur-3xl">
+            <div className="relative h-120 w-full max-w-md overflow-hidden rounded-4xl shadow-2xl border border-[#94c5de]/15 bg-white/5 backdrop-blur-3xl">
               <Image
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80"
+                src="/amei3.jpeg"
                 alt="Foto do psicólogo"
-                width={1000}
-                height={900}
+                fill
                 className="h-full w-full object-cover"
               />
             </div>

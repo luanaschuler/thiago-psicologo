@@ -62,12 +62,11 @@ export default function MagicalNavbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="
-                  text-[foreground]/70
-                  hover:text-[foreground]
-                  transition-colors duration-300
-                  text-sm tracking-wide
-                "
+                className={`text-sm tracking-wide transition-colors duration-300 ${
+                  scrolled
+                    ? "text-[#e5f3f1]/90 hover:text-white"
+                    : "text-[foreground]/70 hover:text-[foreground]"
+                }`}
               >
                 {link.name}
               </a>
@@ -78,17 +77,18 @@ export default function MagicalNavbar() {
           <div className="hidden md:flex">
             <button
               className="
-                px-7 py-2.5
+                px-4 py-3
+                min-w-[180px]
                 rounded-full
                 bg-white
-                text-black
-                text-sm
-                font-medium
+                text-[-primary]
+                text-base
+                font-semibold
                 hover:scale-105
                 transition-all duration-300
               "
             >
-              Vamos Conversar
+              <p>Vamos Conversar</p>
             </button>
           </div>
 
@@ -137,6 +137,7 @@ export default function MagicalNavbar() {
             justify-center
             h-full
             gap-8
+            mt-5
           "
         >
           {links.map((link) => (
@@ -151,6 +152,7 @@ export default function MagicalNavbar() {
                 tracking-wide
                 hover:opacity-70
                 transition-opacity
+                
               "
             >
               {link.name}
@@ -167,7 +169,7 @@ export default function MagicalNavbar() {
               font-medium
             "
           >
-            Vamos Conversar
+            <p>Vamos Conversar</p>
           </button>
         </div>
       </div>

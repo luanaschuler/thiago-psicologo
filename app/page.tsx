@@ -4,6 +4,7 @@ import FeatureGrid from "@/components/FeatureGrid";
 import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Charism from "@/components/Charism";
+import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <Blog />
       <Charism />
+      <Testimonials />
       <FAQ />
       <Footer />
     </main>

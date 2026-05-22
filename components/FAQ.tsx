@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -48,30 +49,43 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={faq.question}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45 }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="rounded-3xl border border-[#94c5de]/20 bg-white/3 backdrop-blur-2xl p-6 shadow-lg"
-            >
-              <button
-                onClick={() => setOpen(open === index ? null : index)}
-                className="flex w-full items-center justify-between text-left text-lg font-semibold text-[#e5f3f1]"
+        <div className="grid gap-10 lg:grid-cols-[auto_1fr] items-center">
+          <div className="flex justify-center lg:justify-start">
+            <Image
+              src="/Ativo_18.svg"
+              alt="FAQ visual"
+              width={360}
+              height={360}
+              className="h-auto w-full max-w-sm"
+            />
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={faq.question}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="rounded-3xl border border-[#94c5de]/20 bg-white/3 backdrop-blur-2xl p-6 shadow-lg"
               >
-                <span>{faq.question}</span>
-                <span className="text-[#f1972e]">
-                  {open === index ? "−" : "+"}
-                </span>
-              </button>
-              {open === index && (
-                <p className="mt-3 text-[#e5f3f1]/80 leading-7">{faq.answer}</p>
-              )}
-            </motion.div>
-          ))}
+                <button
+                  onClick={() => setOpen(open === index ? null : index)}
+                  className="flex w-full items-center justify-between text-left text-lg font-semibold text-[#e5f3f1]"
+                >
+                  <span>{faq.question}</span>
+                  <span className="text-[#f1972e]">
+                    {open === index ? "−" : "+"}
+                  </span>
+                </button>
+                {open === index && (
+                  <p className="mt-3 text-[#e5f3f1]/80 leading-7">
+                    {faq.answer}
+                  </p>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.section>

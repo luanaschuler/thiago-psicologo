@@ -8,29 +8,25 @@ const items = [
     title: "Atenção emocional",
     description:
       "Sessões focadas em ouvir, acolher e construir um plano de cuidado individual.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+    image: "/eviee.jpg",
   },
   {
     title: "Autoconhecimento",
     description:
       "Estratégias para fortalecer sua autoestima e tomar decisões mais confiantes.",
-    image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80",
+    image: "/kittens.jpg",
   },
   {
     title: "Gestão de ansiedade",
     description:
       "Ferramentas práticas para encontrar equilíbrio e reduzir o impacto do estresse.",
-    image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
+    image: "/mountains.jpg",
   },
   {
     title: "Apoio a relacionamentos",
     description:
       "Conversas terapêuticas que melhoram a comunicação e os vínculos pessoais.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+    image: "/three.jpg",
   },
 ];
 

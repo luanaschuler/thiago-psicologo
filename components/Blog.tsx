@@ -10,8 +10,7 @@ const articles = [
     title: "Terapia emocional para o seu equilíbrio",
     excerpt:
       "Entenda como a terapia emocional pode transformar sua relação com ansiedade e autoconfiança.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+    image: "/orange_cat.jpg",
   },
   {
     slug: "autoconhecimento",
@@ -19,7 +18,7 @@ const articles = [
     excerpt:
       "Descubra formas práticas de olhar para si mesmo e fortalecer sua autoestima.",
     image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80",
+      "/sunset.jpg",
   },
   {
     slug: "relacionamentos",
@@ -35,13 +34,13 @@ export default function Blog() {
   return (
     <motion.section
       id="blog"
-      className="py-24"
+      className="py-24 bg-[#e5f3f1]/70"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl bg-[#e5f3f1] px-6">
         <div className="mb-10 text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
             Blog

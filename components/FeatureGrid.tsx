@@ -20,7 +20,7 @@ const items = [
     title: "Gestão de ansiedade",
     description:
       "Ferramentas práticas para encontrar equilíbrio e reduzir o impacto do estresse.",
-    image: "/mountains.jpg",
+    image: "/theshire.jpg",
   },
   {
     title: "Apoio a relacionamentos",

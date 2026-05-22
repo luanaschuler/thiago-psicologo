@@ -39,7 +39,7 @@ export default function About() {
             </p>
             <Image
               src="/Ativo_20.svg"
-              alt="KEEPCALM"
+              alt="logo"
               width={350}
               height={350}
               className="inline-block mt-4"

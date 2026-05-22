@@ -57,25 +57,35 @@ export default function Testimonials() {
 
         <div className="mt-10 flex items-center justify-center">
           <div className="w-full max-w-3xl rounded-4xl border border-[#94c5de]/20 bg-white/5 p-8 shadow-2xl backdrop-blur-3xl">
-            <div className="relative h-40 flex items-center justify-center">
-              {testimonials.map((t, i) => (
-                <motion.blockquote
-                  key={t.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{
-                    opacity: i === index ? 1 : 0,
-                    y: i === index ? 0 : 10,
-                  }}
-                  transition={{ duration: 0.6 }}
-                  className={`absolute inset-0 flex flex-col items-center justify-center px-6 text-center ${i === index ? "" : "pointer-events-none"}`}
-                >
-                  <p className="text-lg leading-8 text-[#0c2a3d]">“{t.text}”</p>
-                  <div className="mt-6 text-center">
-                    <div className="font-semibold text-[#0c2a3d]">{t.name}</div>
-                    <div className="text-sm text-[#5c8fa6]">{t.role}</div>
-                  </div>
-                </motion.blockquote>
-              ))}
+            <div className="relative h-auto md:h-40 flex items-center justify-center">
+              {testimonials.map((t, i) => {
+                const visibilityClass =
+                  i === index
+                    ? "block md:absolute md:inset-0"
+                    : "hidden md:block md:absolute md:inset-0";
+                return (
+                  <motion.blockquote
+                    key={t.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{
+                      opacity: i === index ? 1 : 0,
+                      y: i === index ? 0 : 10,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    className={`${visibilityClass} flex flex-col items-center justify-center px-6 text-center ${i === index ? "" : "pointer-events-none"}`}
+                  >
+                    <p className="text-lg leading-8 text-[#0c2a3d]">
+                      “{t.text}”
+                    </p>
+                    <div className="mt-6 text-center">
+                      <div className="font-semibold text-[#0c2a3d]">
+                        {t.name}
+                      </div>
+                      <div className="text-sm text-[#5c8fa6]">{t.role}</div>
+                    </div>
+                  </motion.blockquote>
+                );
+              })}
             </div>
 
             <div className="mt-6 flex items-center justify-center gap-3">

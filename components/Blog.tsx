@@ -1,91 +1,101 @@
-"use client";
-
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import { client } from "@/sanity/client";
 
-const articles = [
-  {
-    slug: "terapia-emocional",
-    title: "Terapia emocional para o seu equilíbrio",
-    excerpt:
-      "Entenda como a terapia emocional pode transformar sua relação com ansiedade e autoconfiança.",
-    image: "/orange_cat.jpg",
-  },
-  {
-    slug: "autoconhecimento",
-    title: "Autoconhecimento e novas perspectivas",
-    excerpt:
-      "Descubra formas práticas de olhar para si mesmo e fortalecer sua autoestima.",
-    image:
-      "/sunset.jpg",
-  },
-  {
-    slug: "relacionamentos",
-    title: "Apoio para relacionamentos mais saudáveis",
-    excerpt:
-      "Aprenda a construir vínculos mais conscientes e equilibrados em sua vida pessoal.",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
-  },
-];
+// 1. Criamos a interface idêntica para manter a consistência dos dados
+interface Post {
+  _id: string;
+  title: string;
+  slug: string;
+  description: string;
+  publishedAt: string;
+  imageUrl: string | null;
+}
 
-export default function Blog() {
+// Busca estruturada: Pega posts, ordena por data decrescente e limita de 0 a 2 (3 posts)
+const HOME_POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc)[0..2]{
+  _id,
+  title,
+  "slug": slug.current,
+  description,
+  publishedAt,
+  "imageUrl": image.asset->url
+}`;
+
+export default async function HomePage() {
+  // 2. Passamos a tipagem <Post[]> aqui no fetch do Sanity
+  const posts = await client.fetch<Post[]>(HOME_POSTS_QUERY);
+
   return (
-    <motion.section
-      id="blog"
-      className="py-24 bg-[#e5f3f1]/70"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <div className="mx-auto max-w-7xl bg-[#e5f3f1] px-6">
-        <div className="mb-10 text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
-            Blog
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[#0c2a3d]">
-            Artigos para apoiar seu processo
-          </h2>
+    <main className="min-h-screen bg-slate-50 text-slate-900 py-20">
+      {/* Seção do Blog na Home */}
+      <section className="max-w-6xl mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
+              Últimas Publicações
+            </h2>
+            <p className="mt-2 text-lg text-slate-600">
+              Confira os artigos e novidades compartilhados recentemente.
+            </p>
+          </div>
+
+          {/* O BOTÃO SOLICITADO: Leva para a página de todos os artigos */}
+          <Link
+            href="/blog"
+            className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-slate-950 text-white font-medium hover:bg-slate-800 transition-colors duration-200 shadow-xs"
+          >
+            Ver todos os artigos
+          </Link>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {articles.map((article, idx) => (
-            <motion.div
-              key={article.slug}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.08 }}
-              viewport={{ once: true, amount: 0.2 }}
+        {/* Grid dos 3 Artigos com Tailwind v4 */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* 3. Removemos o :any. Agora o mapeamento está 100% seguro */}
+          {posts.map((post) => (
+            <article
+              key={post._id}
+              className="flex flex-col overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-xs hover:shadow-md transition-shadow duration-300"
             >
-              <Link
-                href={`/articles/${article.slug}`}
-                className="group overflow-hidden rounded-4xl border border-[#94c5de]/40 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="h-52 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    width={900}
-                    height={520}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              {/* Imagem de Capa */}
+              <div className="h-48 w-full bg-slate-100 relative overflow-hidden">
+                {post.imageUrl && (
+                  <img
+                    src={post.imageUrl}
+                    alt={post.title}
+                    className="h-full w-full object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
+                )}
+              </div>
+
+              {/* Textos do Card */}
+              <div className="flex flex-1 flex-col p-6">
+                <span className="text-sm text-slate-500">
+                  {new Date(post.publishedAt).toLocaleDateString("pt-BR", {
+                    dateStyle: "long",
+                  })}
+                </span>
+
+                <h3 className="mt-3 text-xl font-semibold leading-snug tracking-tight text-slate-900 hover:text-indigo-600 transition-colors">
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                </h3>
+
+                <p className="mt-3 flex-1 text-base text-slate-600 line-clamp-3">
+                  {post.description}
+                </p>
+
+                <div className="mt-6 pt-4 border-t border-slate-100">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-sm font-semibold text-indigo-600 hover:text-indigo-500 inline-flex items-center gap-1"
+                  >
+                    Ler artigo <span>&rarr;</span>
+                  </Link>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#0c2a3d]">
-                    {article.title}
-                  </h3>
-                  <p className="mt-3 text-[#0c2a3d]/90">{article.excerpt}</p>
-                  <span className="mt-5 inline-flex text-sm font-semibold text-[#f1972e]">
-                    Ler artigo →
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
+              </div>
+            </article>
           ))}
         </div>
-      </div>
-    </motion.section>
+      </section>
+    </main>
   );
 }

@@ -57,12 +57,9 @@ export default function Testimonials() {
 
         <div className="mt-10 flex items-center justify-center">
           <div className="w-full max-w-3xl rounded-4xl border border-[#0c2a3d]/70 bg-[#5c8fa6] p-8 shadow-2xl backdrop-blur-3xl">
-            <div className="relative h-auto md:h-40 flex items-center justify-center">
+            <div className="relative h-auto md:h-auto flex items-center justify-center">
               {testimonials.map((t, i) => {
-                const visibilityClass =
-                  i === index
-                    ? "block md:absolute md:inset-0"
-                    : "hidden md:block md:absolute md:inset-0";
+                const visibilityClass = i === index ? "block" : "hidden";
                 return (
                   <motion.blockquote
                     key={t.id}

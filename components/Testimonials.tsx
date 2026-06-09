@@ -8,21 +8,21 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Mariana S.",
+    name: "Fernanda G.",
     role: "Paciente",
-    text: "O acompanhamento mudou minha relação com a ansiedade. Atendimento acolhedor e com estratégias práticas.",
+    text: "O Thiago é um excelente profissional. Desde a primeira sessão me acolheu muito bem, me senti muito a vontade e bem atendida. Ele é extremante atencioso e preocupado com o bem estar do paciente. Sempre disponível em meio as minhas crises, me ajudando da melhor forma, até mesmo a distância. Só tenho a agradecer por todo cuidado e dedicação. Super recomendo! Obrigada pelo ótimo atendimento.",
   },
   {
     id: 2,
-    name: "Carlos A.",
+    name: "Gabriela P.",
     role: "Paciente",
-    text: "Senti avanços já nas primeiras sessões. Excelente escuta e encaminhamentos que fizeram sentido para mim.",
+    text: "Thiago é um excelente profissional, desde a primeira sessão foi extremamente respeitoso, atencioso e empático, me senti muito a vontade. Possui muito conhecimento e conduz as sessões de uma forma leve e tranquila, o que ajuda muito durante o processo terapêutico. Recomendo sem dúvidas!",
   },
   {
     id: 3,
-    name: "Beatriz M.",
+    name: "Pamela R.",
     role: "Paciente",
-    text: "Profissionalismo e acolhimento. Recomendo para quem busca mais equilíbrio emocional.",
+    text: "Thiago é um excelente profissional, muito atencioso. As sessões são conduzidas de forma leve, acolhedora e sempre proporcionando resultados positivos. Recomendo com total confiança!",
   },
 ];
 

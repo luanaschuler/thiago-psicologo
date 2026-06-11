@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Blog from "@/components/Blog";
 import Charism from "@/components/Charism";
 import Testimonials from "@/components/Testimonials";
+import FirstSession from "@/components/FirstSession";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Blog />
       <Charism />
       <Testimonials />
+      <FirstSession />
       <FAQ />
       <Footer />
     </main>

@@ -2,7 +2,7 @@ export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2026-05-26'
 
 export const dataset = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_DATASET,
+  process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   'Missing environment variable: NEXT_PUBLIC_SANITY_DATASET'
 )
 
@@ -16,5 +16,5 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
     throw new Error(errorMessage)
   }
 
-  return v
+  return v as T
 }

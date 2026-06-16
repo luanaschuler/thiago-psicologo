@@ -9,19 +9,39 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Como funciona a terapia?",
+      question: "Que abordagem eu utilizo?",
       answer:
-        "A terapia é um espaço seguro para explorar suas emoções. Trabalhamos com escuta ativa e estratégias para transformar padrões que causam sofrimento.",
+        "Em meus atendimentos, utilizo a Terapia Cognitivo Comportamental (TCC). De uma forma resumida, entendemos que os nossos pensamentos, sentimentos e comportamentos estão interligados. A TCC busca auxiliar o(a) paciente a identificar e reestruturar padrões disfuncionais, transformando positivamente suas emoções e comportamentos.",
+    },
+    {
+      question: "Que tipos de demanda eu atendo?",
+      answer:
+        "Ao longo dos anos, venho oferecendo acolhimento para demandas diversas, as quais envolvem sofrimento emocional, problemas de relacionamento, desejo de mudança de comportamentos, desenvolvimento de habilidades de comunicação, sexualidade, manejo do estresse e tomada de decisão, além, é claro, de auxiliar em demandas que envolvem diagnósticos dos mais diversos (ansiedade, depressão, entre outros).",
+    },
+    {
+      question: "Qual a periodicidade dos atendimentos?",
+      answer:
+        "A periodicidade poderá variar de acordo com a necessidade e a natureza da demanda de cada paciente. Os atendimentos podem acontecer semanalmente, quinzenalmente ou mensalmente. Além disso, é possível fazer um combinado específico que se encaixe na especificidade de cada caso.",
     },
     {
       question: "Qual o valor das sessões?",
       answer:
-        "Os valores variam de acordo com tipo de atendimento. Entre em contato para receber opções de pacotes e horários disponíveis.",
+        "Os valores variam de acordo com tipo de atendimento. Entre em contato para receber opções de pacotes e horários disponíveis, bem como informaçoes sobre planos de saúde.",
+    },
+    {
+      question: "Que faixas etárias eu atendo?",
+      answer:
+        "Atendo adolescentes, adultos e idosos, independentemente de sexo e/ou orientação sexual (dá pra melhorar essa última parte. Pensei em simplificar, mas ao mesmo tempo deixar claro que não há distinção por sexo e orientação sexual, sendo que essa informação pode ser importante para pessoas LGBTQIAPN+ se sentirem confortáveis).",
     },
     {
       question: "Atendimento é online ou presencial?",
       answer:
         "Ofereço atendimento tanto online quanto presencial, dependendo da sua preferência e do melhor formato para seu processo.",
+    },
+    {
+      question: "Quanto tempo dura uma sessão?",
+      answer:
+        "Uma sessão de terapia tem um tempo de 50 minutos. Sendo assim, é muito importante que cada paciente se prepare no decorrer dos dias antes das sessões para que possa utilizar o tempo da maneira mais produtiva possível.",
     },
     {
       question: "Como posso agendar uma sessão?",

@@ -32,17 +32,18 @@ export default async function HomePage() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-              Últimas Publicações
+              Você ainda gosta de ler?
             </h2>
             <p className="mt-2 text-lg text-slate-600">
-              Confira os artigos e novidades compartilhados recentemente.
+              Aqui você encontra textos pra pensar sobre a vida e sobre assuntos
+              importantes.
             </p>
           </div>
 
           {/* O BOTÃO SOLICITADO: Leva para a página de todos os artigos */}
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-slate-950 text-white font-medium hover:bg-slate-800 transition-colors duration-200 shadow-xs"
+            className="inline-flex items-center justify-center px-2.5 py-2.5 rounded-xl bg-slate-950 text-white font-medium hover:bg-slate-800 transition-colors duration-200 shadow-xs"
           >
             Ver todos os artigos
           </Link>

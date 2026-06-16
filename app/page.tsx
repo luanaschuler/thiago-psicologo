@@ -6,6 +6,7 @@ import Blog from "@/components/Blog";
 import Charism from "@/components/Charism";
 import Testimonials from "@/components/Testimonials";
 import FirstSession from "@/components/FirstSession";
+import SecondSession from "@/components/SecondSession";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Charism />
       <Testimonials />
       <FirstSession />
+      <SecondSession />
       <FAQ />
       <Footer />
     </main>

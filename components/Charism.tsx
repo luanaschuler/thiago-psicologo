@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Charism() {
   return (
     <motion.section
-      className="relative py-24 bg-[#e5f3f1]/60"
+      className="relative py-8 bg-[#e5f3f1]/60"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

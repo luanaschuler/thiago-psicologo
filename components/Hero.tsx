@@ -7,21 +7,28 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#0c2a3d] text-white mt-6"
+      className="relative min-h-screen overflow-hidden bg-[#0c2a3d] text-white"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover scale-102 opacity-90"
-        src="/maybe_thiago.mp4"
-      />
       <div className="absolute inset-0" />
+      {/* Vídeo background: metade direita do Hero (visível em todas as larguras) */}
+      <div className="absolute inset-y-0 right-0 w-1/2 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover opacity-100 scale-105 transform filter contrast-110 saturate-110"
+          src="/maybe_thiago.mp4"
+        />
+      </div>
+      {/* Fade entre metades (transição suave para o vídeo) */}
+      <div className="absolute top-0 left-1/2 h-full w-28 md:w-48 lg:w-36 transform -translate-x-1/2 pointer-events-none z-[5]">
+        <div className="h-full w-full bg-gradient-to-r from-[#0c2a3d] via-[#0c2a3d]/70 to-transparent opacity-60" />
+      </div>
       {/* Transição esbranquiçada e esfumada muito mais evidente */}
       <div className="absolute bottom-0 left-0 right-0 h-54 bg-gradient-to-t from-white/100 via-white/50 to-transparent pointer-events-none" />
 
@@ -46,8 +53,8 @@ export default function Hero() {
 
             {/* Coluna do Texto */}
             <div className="flex items-end w-full">
-              <div className="w-full max-w-2xl flex flex-col justify-end">
-                <div className="text-right">
+              <div className="relative w-full max-w-2xl flex flex-col justify-end">
+                <div className="text-right relative z-10">
                   <Image
                     src="/Ativo_1.svg"
                     alt="KEEPCALM"

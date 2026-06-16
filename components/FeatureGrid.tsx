@@ -34,7 +34,7 @@ export default function FeatureGrid() {
   return (
     <motion.section
       id="servicos"
-      className="bg-[#e5f3f1]/90 py-20"
+      className="bg-white/30 py-20"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

@@ -21,7 +21,7 @@ export default function FAQ() {
     {
       question: "Qual a periodicidade dos atendimentos?",
       answer:
-        "A periodicidade poderá variar de acordo com a necessidade e a natureza da demanda de cada paciente. Os atendimentos podem acontecer semanalmente, quinzenalmente ou mensalmente. Além disso, é possível fazer um combinado específico que se encaixe na especificidade de cada caso.",
+        "A periodicidade poderá variar de acordo com a necessidade e a natureza da demanda de cada paciente. Os atendimentos podem acontecer semanalmente, quinzenalmente ou mensalmente. Além disso, é possível fazer um combinado específico que se encaixe com a sua necessidade.",
     },
     {
       question: "Qual o valor das sessões?",
@@ -29,9 +29,9 @@ export default function FAQ() {
         "Os valores variam de acordo com tipo de atendimento. Entre em contato para receber opções de pacotes e horários disponíveis, bem como informaçoes sobre planos de saúde.",
     },
     {
-      question: "Que faixas etárias eu atendo?",
+      question: "Quais grupos etários eu atendo?",
       answer:
-        "Atendo adolescentes, adultos e idosos, independentemente de sexo e/ou orientação sexual (dá pra melhorar essa última parte. Pensei em simplificar, mas ao mesmo tempo deixar claro que não há distinção por sexo e orientação sexual, sendo que essa informação pode ser importante para pessoas LGBTQIAPN+ se sentirem confortáveis).",
+        "Atendo adolescentes, adultos e idosos, com respeito à diversidade de identidades de genero e orientações afetivo-sexuais.",
     },
     {
       question: "Atendimento é online ou presencial?",

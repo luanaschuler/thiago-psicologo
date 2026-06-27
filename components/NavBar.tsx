@@ -19,12 +19,12 @@ export default function MagicalNavbar() {
   }, []);
 
   const links = [
-    { name: "Abordagens", href: "#about" },
-    { name: "Sobre Mim", href: "#projects" },
-    { name: "Artigos", href: "#services" },
-    { name: "Entendendo", href: "#understanding" },
-    { name: "FAQ", href: "#FAQ" },
-    { name: "Contato", href: "#contact" },
+    { name: "Abordagens", href: "#servicos" },
+    { name: "Sobre Mim", href: "#sobre" },
+    { name: "Artigos", href: "#artigos" },
+    { name: "Entendendo", href: "#segunda-sessao" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contato", href: "#contato" },
   ];
 
   return (
@@ -75,7 +75,8 @@ export default function MagicalNavbar() {
 
           {/* CTA */}
           <div className="hidden md:flex">
-            <button
+            <a
+              href="#contato"
               className="
                 px-4 py-3
                 min-w-[180px]
@@ -86,10 +87,13 @@ export default function MagicalNavbar() {
                 font-semibold
                 hover:scale-105
                 transition-all duration-300
+                inline-flex
+                items-center
+                justify-center
               "
             >
               <p>Vamos Conversar</p>
-            </button>
+            </a>
           </div>
 
           {/* MOBILE BUTTON */}
@@ -159,7 +163,9 @@ export default function MagicalNavbar() {
             </a>
           ))}
 
-          <button
+          <a
+            href="#contato"
+            onClick={() => setMobileMenu(false)}
             className="
               mt-6
               px-6 py-3
@@ -170,7 +176,7 @@ export default function MagicalNavbar() {
             "
           >
             <p>Vamos Conversar</p>
-          </button>
+          </a>
         </div>
       </div>
     </>

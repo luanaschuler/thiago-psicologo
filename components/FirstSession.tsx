@@ -40,8 +40,8 @@ export default function FirstSession() {
 
           {/* Coluna direita: texto */}
           <div className="flex flex-col justify-start">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
-              Primeira sessão
+            <p className="text-sm uppercase tracking-[0.3em] text-[#0c2a3d]">
+              COMO SÃO AS MINHAS SESSÕES?
             </p>
             <h3 className="mt-3 text-2xl font-semibold text-[#0c2a3d]">
               Como funciona a primeira sessão
@@ -52,15 +52,15 @@ export default function FirstSession() {
               conhecendo os personagens, os desafios da trama e os objetivos da
               temporada. O(a) roteirista, que é você, vai contar o que te trouxe
               até ali, falar sobre sua rotina, suas queixas, pensamentos e
-              emoções. 
+              emoções.
             </p>
             <p className="mt-4 text-[#0c2a3d] leading-7 text-justify">
               O psicólogo vai fazer perguntas pra montar o “mapa” da situação e
-              tentar entender o que está ajudando ou atrapalhando essa trama. Não é
-              como em uma “prova”, então não existem respostas certas ou erradas.
-              O objetivo é entender as coisas. Também é um momento para conhecer
-              como a terapia funciona e esclarecer dúvidas. No final, começamos a
-              traçar um plano de trabalho.
+              tentar entender o que está ajudando ou atrapalhando essa trama.
+              Não é como em uma “prova”, então não existem respostas certas ou
+              erradas. O objetivo é entender as coisas. Também é um momento para
+              conhecer como a terapia funciona e esclarecer dúvidas. No final,
+              começamos a traçar um plano de trabalho.
             </p>
           </div>
         </div>

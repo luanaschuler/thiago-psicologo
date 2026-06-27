@@ -14,21 +14,19 @@ export default function Hero() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="absolute inset-0" />
-      {/* Vídeo background: metade direita do Hero (visível em todas as larguras) */}
-      <div className="absolute inset-y-0 right-0 w-1/2 z-0 overflow-hidden">
+      {/* Vídeo de fundo cobrindo todo o hero */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="h-full w-full object-cover opacity-100 scale-105 transform filter contrast-110 saturate-110"
+          className="h-full w-full object-cover object-center opacity-100 scale-105 transform filter contrast-110 saturate-110"
           src="/maybe_thiago.mp4"
         />
       </div>
-      {/* Fade entre metades (transição suave para o vídeo) */}
-      <div className="absolute top-0 left-1/2 h-full w-28 md:w-48 lg:w-36 transform -translate-x-1/2 pointer-events-none z-[5]">
-        <div className="h-full w-full bg-gradient-to-r from-[#0c2a3d] via-[#0c2a3d]/70 to-transparent opacity-60" />
-      </div>
+      {/* Sobreposição de contraste para manter o conteúdo legível */}
+      <div className="absolute inset-0 pointer-events-none z-[5] bg-gradient-to-r from-[#0c2a3d]/90 via-[#0c2a3d]/50 to-transparent" />
       {/* Transição esbranquiçada e esfumada muito mais evidente */}
       <div className="absolute bottom-0 left-0 right-0 h-54 bg-gradient-to-t from-white/100 via-white/50 to-transparent pointer-events-none" />
 
@@ -39,7 +37,7 @@ export default function Hero() {
           {/* items-end faz com que tanto a foto quanto o texto fiquem apoiados no "chão" do glass card */}
           <div className="grid gap-8 w-full lg:grid-cols-[1.1fr_1fr] items-end">
             {/* Coluna da Imagem com margem negativa no desktop para flutuar para fora pelo topo */}
-            <div className="relative overflow-hidden rounded-4xl shadow-xl w-full max-w-[320px] lg:max-w-[350px] h-auto lg:ml-8 z-10 mx-auto lg:mx-0 lg:-mt-24 transform lg:translate-y-0">
+            <div className="relative overflow-hidden rounded-4xl shadow-xl w-full max-w-[320px] lg:max-w-[385px] h-auto lg:ml-8 z-10 mx-auto lg:mx-0 lg:-mt-24 lg:-translate-y-3 transform">
               <Image
                 src="/joia3.jpeg"
                 alt="Atendimento psicológico"

@@ -28,7 +28,7 @@ export default async function HomePage() {
   return (
     <main className="min-h-screen bg-[#e5f3f1]/50 text-slate-900 py-10">
       {/* Seção do Blog na Home */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section id="artigos" className="max-w-6xl mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">

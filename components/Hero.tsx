@@ -51,15 +51,18 @@ export default function Hero() {
 
             {/* Coluna do Texto */}
             <div className="flex items-end w-full">
-              <div className="relative w-full max-w-2xl flex flex-col justify-end">
-                <div className="text-right relative z-10">
+              <div className="relative w-full max-w-2xl">
+                <div className="absolute inset-x-0 top-0 z-10">
                   <Image
                     src="/Ativo_1.svg"
                     alt="KEEPCALM"
-                    width={850}
-                    height={850}
-                    className="mb-2 h-[260px] w-auto object-contain md:h-[310px] lg:h-[420px]"
+                    width={1200}
+                    height={450}
+                    className="block h-[220px] w-full object-contain object-right md:h-[260px] lg:h-[330px]"
                   />
+                </div>
+
+                <div className="relative z-20 pt-[220px] text-right md:pt-[260px] lg:pt-[330px]">
                   <h1 className="text-2xl md:text-3xl font-semibold text-[#0c2a3d] leading-tight font-family-[New Title]">
                     Atendimento psicológico focado na sua saúde mental,
                     <br />

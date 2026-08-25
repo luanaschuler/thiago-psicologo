@@ -47,10 +47,10 @@ export default function Testimonials() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="space-y-8 text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
+          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-lg">
             Depoimentos
           </p>
-          <h2 className="text-4xl font-semibold text-[#0c2a3d]">
+          <h2 className="text-4xl font-semibold text-[#0c2a3d] md:text-5xl">
             O que as pessoas dizem
           </h2>
         </div>
@@ -71,7 +71,7 @@ export default function Testimonials() {
                     transition={{ duration: 0.6 }}
                     className={`${visibilityClass} flex flex-col items-center justify-center px-6 text-center ${i === index ? "" : "pointer-events-none"}`}
                   >
-                    <p className="text-lg leading-8 text-[#0c2a3d]">
+                    <p className="text-lg leading-8 text-[#0c2a3d] text-justify text-center">
                       “{t.text}”
                     </p>
                     <div className="mt-6 text-center">

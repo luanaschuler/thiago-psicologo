@@ -40,13 +40,13 @@ export default function FirstSession() {
 
           {/* Coluna direita: texto */}
           <div className="flex flex-col justify-start">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#0c2a3d]">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
               COMO SÃO AS MINHAS SESSÕES?
             </p>
-            <h3 className="mt-3 text-2xl font-semibold text-[#0c2a3d]">
+            <h3 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">
               Como funciona a primeira sessão
             </h3>
-            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify">
+            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify font-medium">
               Vamos falar de um jeito bem simples. A primeira sessão de terapia
               é tipo como começar a assistir uma série nova. O psicólogo vai
               conhecendo os personagens, os desafios da trama e os objetivos da
@@ -54,7 +54,7 @@ export default function FirstSession() {
               até ali, falar sobre sua rotina, suas queixas, pensamentos e
               emoções.
             </p>
-            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify">
+            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify font-medium">
               O psicólogo vai fazer perguntas pra montar o “mapa” da situação e
               tentar entender o que está ajudando ou atrapalhando essa trama.
               Não é como em uma “prova”, então não existem respostas certas ou

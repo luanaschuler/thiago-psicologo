@@ -56,16 +56,18 @@ export default function Hero() {
                   <Image
                     src="/Ativo_1.svg"
                     alt="KEEPCALM"
-                    width={350}
-                    height={350}
-                    className="inline-block mb-2"
+                    width={850}
+                    height={850}
+                    className="mb-2 h-[260px] w-auto object-contain md:h-[310px] lg:h-[420px]"
                   />
                   <h1 className="text-2xl md:text-3xl font-semibold text-[#0c2a3d] leading-tight font-family-[New Title]">
-                    Psicologia para saúde emocional, acolhimento e mudança real.
+                    Atendimento psicológico focado na sua saúde mental,
+                    <br />
+                    com acolhimento e mudança real.
                   </h1>
                   <p className="mt-2 text-[#0c2a3d]/90 text-sm max-w-lg ml-auto">
-                    Um olhar profissional e humano para apoiar sua evolução com
-                    empatia e clareza.
+                    atendimento psicológico focado na sua saúde mental, com
+                    acolhimento e mudança real.
                   </p>
                   <div className="mt-4 flex justify-end">
                     <a

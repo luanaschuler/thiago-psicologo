@@ -47,10 +47,10 @@ export default function FeatureGrid() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10 text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#5c8fa6]">
+          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-lg">
             O que eu ofereço
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[#0c2a3d]">
+          <h2 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">
             Abordagem humana em cada atendimento
           </h2>
         </div>
@@ -60,7 +60,7 @@ export default function FeatureGrid() {
             {items.slice(0, 3).map((item) => (
               <motion.div
                 key={item.title}
-                className="flex h-full flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg"
+                className="flex h-[420px] flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -75,11 +75,13 @@ export default function FeatureGrid() {
                     className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
-                <div className="flex-1 p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-xl font-semibold text-[#0c2a3d]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[#0c2a3d]/90">{item.description}</p>
+                  <p className="mt-3 flex-1 text-[#0c2a3d]/90">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -89,7 +91,7 @@ export default function FeatureGrid() {
             {items.slice(3).map((item) => (
               <motion.div
                 key={item.title}
-                className="flex w-full flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg sm:w-[min(100%,22rem)]"
+                className="flex h-[420px] w-full flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg sm:w-[min(100%,22rem)]"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -104,11 +106,13 @@ export default function FeatureGrid() {
                     className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
-                <div className="flex-1 p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-xl font-semibold text-[#0c2a3d]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[#0c2a3d]/90">{item.description}</p>
+                  <p className="mt-3 flex-1 text-[#0c2a3d]/90">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

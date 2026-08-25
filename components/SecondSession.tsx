@@ -27,14 +27,14 @@ export default function SecondSession() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
           {/* Coluna esquerda: parágrafos 2 e 3 */}
           <div className="flex flex-col rounded-2xl p-4 md:p-8">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#0c2a3d]">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
               O PROCESSO TERAPÊUTICO
             </p>
-            <h3 className="mt-3 text-2xl font-semibold text-[#0c2a3d]">
+            <h3 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">
               O que acontece após a primeira sessão
             </h3>
 
-            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify">
+            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify font-medium">
               Depois desse primeiro episódio, começa o trabalho mais intenso -
               ou a temporada principal da série. Nós vamos investigar a natureza
               das suas queixas, os fatores que mantém os problemas e buscaremos
@@ -44,7 +44,7 @@ export default function SecondSession() {
               avaliaremos o que funciona melhor na vida real.
             </p>
 
-            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify">
+            <p className="mt-4 text-[#0c2a3d] leading-7 text-justify font-medium">
               Poderemos usar exercícios e desafios entre os encontros (nada como
               um “trabalho de faculdade”. São apenas pequenas experiências para
               colocar em prática o que foi discutido).

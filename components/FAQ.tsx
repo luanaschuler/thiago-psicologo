@@ -31,7 +31,7 @@ export default function FAQ() {
     {
       question: "Quais grupos etários eu atendo?",
       answer:
-        "Atendo adolescentes, adultos e idosos, com respeito à diversidade de identidades de genero e orientações afetivo-sexuais.",
+        "Atendo adolescentes, adultos e idosos, com respeito à diversidade de identidades de gênero e orientações afetivo-sexuais.",
     },
     {
       question: "Atendimento é online ou presencial?",
@@ -61,10 +61,10 @@ export default function FAQ() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-10 text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#94c5de]">
+          <p className="text-base uppercase tracking-[0.3em] text-[#94c5de] md:text-lg">
             FAQ
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[#e5f3f1]">
+          <h2 className="mt-3 text-4xl font-semibold text-[#e5f3f1] md:text-5xl">
             Perguntas frequentes
           </h2>
         </div>

@@ -15,10 +15,10 @@ export default function Charism() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-8 lg:grid-cols-[0.65fr_0.35fr] items-center rounded-4xl border border-[#94c5de]/30 bg-[url('/three.jpg')] bg-cover bg-center p-8 shadow-2xl">
           <div className="self-end rounded-4xl border border-[#94c5de]/20 bg-white/5 p-10 backdrop-blur-3xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#0c2a3d]">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
               Conexão e acolhimento
             </p>
-            <h2 className="mt-4 text-4xl font-semibold text-[#94c5de]">
+            <h2 className="mt-4 text-4xl font-semibold text-[#94c5de] md:text-5xl">
               Um espaço para ver, ouvir e transformar.
             </h2>
             <p className="mt-6 text-[#e5f3f1]/90 leading-8">

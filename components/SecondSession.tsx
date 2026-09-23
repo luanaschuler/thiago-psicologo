@@ -15,7 +15,7 @@ export default function SecondSession() {
     >
       {/* Blurred background overlay similar to FirstSession */}
       <div
-        className="absolute inset-0 blur-md opacity-80"
+        className="absolute inset-0 blur-md opacity-60"
         style={{
           backgroundImage: "url(/smile.jpg)",
           backgroundSize: "cover",

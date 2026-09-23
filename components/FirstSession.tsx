@@ -15,7 +15,7 @@ export default function FirstSession() {
     >
       {/* Blurred background overlay */}
       <div
-        className="absolute inset-0 blur-md opacity-80"
+        className="absolute inset-0 blur-md opacity-60"
         style={{
           backgroundImage: "url(/howareyou.jpg)",
           backgroundSize: "cover",

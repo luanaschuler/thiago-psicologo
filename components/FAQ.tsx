@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
@@ -26,7 +26,7 @@ export default function FAQ() {
     {
       question: "Qual o valor das sessões?",
       answer:
-        "Os valores variam de acordo com tipo de atendimento. Entre em contato para receber opções de pacotes e horários disponíveis, bem como informaçoes sobre planos de saúde.",
+        "Os valores variam de acordo com tipo de atendimento. Entre em contato para receber opções de pacotes e horários disponíveis, bem como informações sobre planos de saúde.",
     },
     {
       question: "Quais grupos etários eu atendo?",
@@ -46,14 +46,14 @@ export default function FAQ() {
     {
       question: "Como posso agendar uma sessão?",
       answer:
-        "Use o botão de agendamento no topo da página ou envie um contato por e-mail para reservar seu horário.",
+        "Você fará contato direto comigo, sem aten dente virtual ou intermédio com scretária. Você pode entrar em contato diretamente pelo WhatsApp através dos botões de agendamento ou pelo email disponibilizado. Assim que receber a mensagem, eu retorno com disponibilidade, horários e informações sobre o primeiro atendimento.",
     },
   ];
 
   return (
     <motion.section
       id="faq"
-      className="relative py-24 bg-gradient-to-br from-[#0c2a3d] to-[#5c8fa6]"
+      className="relative bg-gradient-to-br from-[#0c2a3d] to-[#5c8fa6] py-24"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -69,7 +69,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[auto_1fr] items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-[auto_1fr]">
           <div className="flex justify-center lg:justify-start">
             <Image
               src="/Ativo_18.svg"
@@ -79,6 +79,7 @@ export default function FAQ() {
               className="h-auto w-full max-w-sm"
             />
           </div>
+
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
@@ -87,7 +88,7 @@ export default function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45 }}
                 viewport={{ once: true, amount: 0.2 }}
-                className="rounded-3xl border border-[#94c5de]/20 bg-white/3 backdrop-blur-2xl p-6 shadow-lg"
+                className="rounded-3xl border border-[#94c5de]/20 bg-white/5 p-6 shadow-lg backdrop-blur-2xl"
               >
                 <button
                   onClick={() => setOpen(open === index ? null : index)}
@@ -98,8 +99,9 @@ export default function FAQ() {
                     {open === index ? "−" : "+"}
                   </span>
                 </button>
+
                 {open === index && (
-                  <p className="mt-3 text-[#e5f3f1]/80 leading-7">
+                  <p className="mt-3 leading-7 text-[#e5f3f1]/80">
                     {faq.answer}
                   </p>
                 )}

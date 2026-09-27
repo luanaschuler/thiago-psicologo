@@ -46,7 +46,7 @@ export default function FAQ() {
     {
       question: "Como posso agendar uma sessão?",
       answer:
-        "Você fará contato direto comigo, sem aten dente virtual ou intermédio com scretária. Você pode entrar em contato diretamente pelo WhatsApp através dos botões de agendamento ou pelo email disponibilizado. Assim que receber a mensagem, eu retorno com disponibilidade, horários e informações sobre o primeiro atendimento.",
+        "Você fará contato direto comigo, sem atendente virtual ou intermédio com secretária. Você pode entrar em contato diretamente pelo WhatsApp através dos botões de agendamento ou pelo email disponibilizado. Assim que receber a mensagem, eu retorno com disponibilidade, horários e informações sobre o primeiro atendimento.",
     },
   ];
 

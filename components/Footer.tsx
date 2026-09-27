@@ -51,7 +51,7 @@ export default function Footer() {
               href="#contato"
               className="mt-2 inline-flex rounded-full bg-[#f1972e] px-6 py-3 text-sm font-semibold text-[#0c2a3d] transition hover:bg-[#d58224]"
             >
-              Quero agendar uma sessão
+              Converse diretamente comigo
             </Link>
           </div>
         </div>

@@ -47,7 +47,7 @@ export default function FeatureGrid() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10 text-center">
-          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-lg">
+          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-2xl">
             O que eu ofereço
           </p>
           <h2 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">

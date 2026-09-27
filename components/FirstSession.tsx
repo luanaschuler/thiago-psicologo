@@ -40,7 +40,7 @@ export default function FirstSession() {
 
           {/* Coluna direita: texto */}
           <div className="flex flex-col justify-start">
-            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-2xl">
               COMO SÃO AS MINHAS SESSÕES?
             </p>
             <h3 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">

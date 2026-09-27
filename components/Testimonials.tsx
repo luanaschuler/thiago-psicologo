@@ -47,7 +47,7 @@ export default function Testimonials() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="space-y-8 text-center">
-          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-lg">
+          <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-2xl">
             Depoimentos
           </p>
           <h2 className="text-4xl font-semibold text-[#0c2a3d] md:text-5xl">

@@ -21,7 +21,7 @@ export default function About() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid gap-8 rounded-4xl border border-[#94c5de]/20 bg-white/5 p-8 shadow-2xl backdrop-blur-3xl lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6 text-slate-950">
-            <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-lg">
+            <p className="text-base uppercase tracking-[0.3em] text-[#5c8fa6] md:text-2xl">
               Sobre mim
             </p>
             <h2 className="text-4xl font-semibold leading-tight text-[#5c8fa6] md:text-5xl">

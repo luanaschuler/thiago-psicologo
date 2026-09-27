@@ -27,7 +27,7 @@ export default function SecondSession() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
           {/* Coluna esquerda: parágrafos 2 e 3 */}
           <div className="flex flex-col rounded-2xl p-4 md:p-8">
-            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-2xl">
               O PROCESSO TERAPÊUTICO
             </p>
             <h3 className="mt-3 text-4xl font-semibold text-[#0c2a3d] md:text-5xl">

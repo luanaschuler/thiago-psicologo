@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 export default function Charism() {
   return (
     <motion.section
-      className="relative py-8 bg-[#e5f3f1]/60"
+      className="relative py-8 bg-[#e5f3f1]/80"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-8 lg:grid-cols-[0.65fr_0.35fr] items-center rounded-4xl border border-[#94c5de]/30 bg-[url('/three.jpg')] bg-cover bg-center p-8 shadow-2xl">
-          <div className="self-end rounded-4xl border border-[#94c5de]/20 bg-white/5 p-10 backdrop-blur-3xl">
-            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] md:text-lg">
+        <div className="grid gap-8 lg:grid-cols-[0.65fr_0.35fr] items-center rounded-4xl border border-[#94c5de]/30 bg-[linear-gradient(rgba(12,42,61,0.30),rgba(12,42,61,0.45)),url('/three.jpg')] bg-cover bg-center p-8 shadow-2xl">
+          <div className="self-end rounded-4xl border border-[#94c5de]/20 bg-white/15 p-10 backdrop-blur-xl">
+            <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] font-bold md:text-xl">
               Conexão e acolhimento
             </p>
             <h2 className="mt-4 text-4xl font-semibold text-[#94c5de] md:text-5xl">

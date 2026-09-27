@@ -61,7 +61,7 @@ export default function FAQ() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-10 text-center">
-          <p className="text-base uppercase tracking-[0.3em] text-[#94c5de] md:text-lg">
+          <p className="text-base uppercase tracking-[0.3em] text-[#94c5de] md:text-2xl">
             FAQ
           </p>
           <h2 className="mt-3 text-4xl font-semibold text-[#e5f3f1] md:text-5xl">
@@ -101,7 +101,7 @@ export default function FAQ() {
                 </button>
 
                 {open === index && (
-                  <p className="mt-3 leading-7 text-[#e5f3f1]/80">
+                  <p className="mt-3 text-justify leading-7 text-[#e5f3f1]/80">
                     {faq.answer}
                   </p>
                 )}

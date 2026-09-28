@@ -18,10 +18,10 @@ export default function Charism() {
             <p className="text-base uppercase tracking-[0.3em] text-[#0c2a3d] font-bold md:text-xl">
               Conexão e acolhimento
             </p>
-            <h2 className="mt-4 text-4xl font-semibold text-[#94c5de] md:text-5xl">
+            <h2 className="mt-4 text-justify text-4xl font-semibold text-[#94c5de] md:text-5xl">
               Um espaço para ver, ouvir e transformar.
             </h2>
-            <p className="mt-6 text-[#e5f3f1]/90 leading-8">
+            <p className="mt-6 text-justify text-[#e5f3f1]/90 leading-8">
               Atendimento pensado para trazer clareza aos seus sentimentos e
               criar uma rotina emocional mais tranquila.
             </p>

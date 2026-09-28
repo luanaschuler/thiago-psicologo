@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -46,14 +45,15 @@ export default function Hero() {
 
           px-4
           pb-4
-          pt-24
+          pt-28
 
           sm:px-5
           sm:pb-5
+          sm:pt-32
 
           lg:px-6
           lg:pb-6
-          lg:pt-0
+          lg:pt-36
 
           2xl:max-w-[1500px]
           4xl:max-w-[1900px]
@@ -378,4 +378,3 @@ export default function Hero() {
     </motion.section>
   );
 }
-

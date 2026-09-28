@@ -26,7 +26,7 @@ export default async function HomePage() {
   const posts = await client.fetch<Post[]>(HOME_POSTS_QUERY);
 
   return (
-    <main className="min-h-screen bg-[#e5f3f1]/50 text-slate-900 py-10">
+    <main className="bg-[#e5f3f1]/50 text-slate-900 py-10">
       {/* Seção do Blog na Home */}
       <section id="artigos" className="max-w-6xl mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
@@ -76,11 +76,11 @@ export default async function HomePage() {
                   })}
                 </span>
 
-                <h3 className="mt-3 text-xl font-semibold leading-snug tracking-tight text-slate-900 hover:text-indigo-600 transition-colors">
+                <h3 className="mt-3 text-justify text-xl font-semibold leading-snug tracking-tight text-slate-900 hover:text-indigo-600 transition-colors">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h3>
 
-                <p className="mt-3 flex-1 text-base text-slate-600 line-clamp-3">
+                <p className="mt-3 flex-1 text-justify text-base text-slate-600 line-clamp-3">
                   {post.description}
                 </p>
 

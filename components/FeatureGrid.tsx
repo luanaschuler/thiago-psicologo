@@ -33,6 +33,12 @@ const items = [
     description: "Acolhimento direcionado à demanda de cada paciente.",
     image: "/mountains.jpg",
   },
+  {
+    title: "Saúde emocional",
+    description:
+      "Cuidado emocional para lidar com desafios, compreender sentimentos e viver com mais equilibrio.",
+    image: "/orange_cat.jpg",
+  },
 ];
 
 export default function FeatureGrid() {
@@ -55,12 +61,16 @@ export default function FeatureGrid() {
           </h2>
         </div>
 
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6">
-          <div className="grid w-full gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {items.slice(0, 3).map((item) => (
+        <div className="mx-auto max-w-5xl">
+          <div className="grid w-full gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {items.map((item, index) => (
               <motion.div
                 key={item.title}
-                className="flex h-[420px] flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg"
+                className={`flex h-[420px] flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg ${
+                  index === items.length - 1
+                    ? "md:justify-self-center lg:justify-self-auto"
+                    : ""
+                }`}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -76,41 +86,10 @@ export default function FeatureGrid() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-semibold text-[#0c2a3d]">
+                  <h3 className="text-3xl font-semibold text-[#0c2a3d]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-[#0c2a3d]/90">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-center">
-            {items.slice(3).map((item) => (
-              <motion.div
-                key={item.title}
-                className="flex h-[420px] w-full flex-col overflow-hidden rounded-3xl border border-[#94c5de]/40 bg-white shadow-lg sm:w-[min(100%,22rem)]"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                <div className="h-44 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={900}
-                    height={440}
-                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-semibold text-[#0c2a3d]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-[#0c2a3d]/90">
+                  <p className="mt-3 flex-1 text-justify text-[#0c2a3d]/90">
                     {item.description}
                   </p>
                 </div>

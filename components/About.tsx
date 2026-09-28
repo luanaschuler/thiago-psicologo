@@ -27,12 +27,12 @@ export default function About() {
             <h2 className="text-4xl font-semibold leading-tight text-[#5c8fa6] md:text-5xl">
               Eu apoio seu caminho para mais clareza e equilíbrio.
             </h2>
-            <p className="text-[background]/90 leading-8">
+            <p className="text-justify text-[background]/90 leading-8">
               Sou psicólogo com foco em atender pessoas que buscam reduzir
               ansiedade, melhorar relacionamentos e fortalecer o
               autoconhecimento.
             </p>
-            <p className="text-[background]/90 leading-8">
+            <p className="text-justify text-[background]/90 leading-8">
               Cada sessão é planejada para oferecer acolhimento e ferramentas
               práticas, ajudando você a desenvolver mais confiança nas escolhas
               do dia a dia e a se fortalecer para enfrentar os desafios da vida

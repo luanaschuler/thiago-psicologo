@@ -48,7 +48,9 @@ export default function Footer() {
 
           <div>
             <Link
-              href="#contato"
+              href="https://wa.me/554791541117?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex rounded-full bg-[#f1972e] px-6 py-3 text-sm font-semibold text-[#0c2a3d] transition hover:bg-[#d58224]"
             >
               Converse diretamente comigo

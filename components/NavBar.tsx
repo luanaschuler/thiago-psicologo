@@ -76,7 +76,9 @@ export default function MagicalNavbar() {
           {/* CTA */}
           <div className="hidden md:flex">
             <a
-              href="#contato"
+              href="https://wa.me/554791541117?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o."
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 px-3 py-2.5
                 min-w-[150px]

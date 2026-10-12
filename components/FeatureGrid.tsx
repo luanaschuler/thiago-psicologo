@@ -8,7 +8,7 @@ const items = [
     title: "Atenção emocional",
     description:
       "Sessões focadas em ouvir, acolher e construir um plano de cuidado individual.",
-    image: "/therapy.jpg",
+    image: "/apoiocomgatinho.jpg",
   },
   {
     title: "Autoconhecimento",
@@ -26,12 +26,12 @@ const items = [
     title: "Apoio a relacionamentos",
     description:
       "Conversas terapêuticas que melhoram a comunicação e os vínculos pessoais.",
-    image: "/therapy2.jpg",
+    image: "/hobits.jpg",
   },
   {
     title: "Atendimento personalizado",
     description: "Acolhimento direcionado à demanda de cada paciente.",
-    image: "/mountains.jpg",
+    image: "/psico.jpeg",
   },
   {
     title: "Saúde emocional",

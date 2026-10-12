@@ -35,8 +35,8 @@ export default function MagicalNavbar() {
           transition-all duration-500 ease-out
           ${
             scrolled
-              ? "w-[92%] max-w-5xl py-2 bg-black/60 shadow-2xl border border-white/10 backdrop-blur-xl md:py-1.5"
-              : "w-[95%] max-w-6xl py-2.5 bg-white/5 border border-white/10 backdrop-blur-md md:py-2"
+              ? "w-[92%] max-w-5xl py-1.5 bg-black/60 shadow-2xl border border-white/10 backdrop-blur-xl md:py-1.5"
+              : "w-[95%] max-w-6xl py-2 bg-white/5 border border-white/10 backdrop-blur-md md:py-2"
           }
           rounded-full
         `}
@@ -52,7 +52,7 @@ export default function MagicalNavbar() {
               alt="Logo"
               width={130}
               height={130}
-              className="mr-2 inline-block h-[82px] w-[72px] md:h-[95px] md:w-[95px] lg:h-[100px] lg:w-[150px] ml-8"
+              className="mr-2 inline-block h-14 w-[100px] md:h-[95px] md:w-[95px] lg:h-[100px] lg:w-[150px] ml-8"
             />
           </a>
 

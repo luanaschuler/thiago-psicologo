@@ -242,11 +242,11 @@ export default function Hero() {
                       height={120}
                       className="
                         h-auto
-                        w-[25px]
+                        w-[38px]
                         mb-3
                         ml-2
 
-                        sm:w-[32px]
+                        sm:w-[42px]
 
                         md:w-[48px]
 
@@ -265,7 +265,7 @@ export default function Hero() {
                       block
                       whitespace-nowrap
 
-                      text-[clamp(2.25rem,9vw,3rem)]
+                      text-[clamp(1.6rem,8vw,2.5rem)]
 
                       sm:text-[clamp(2.8rem,8.5vw,4rem)]
 

@@ -22,7 +22,7 @@ export default function MagicalNavbar() {
     { name: "O que ofereço", href: "#servicos" },
     { name: "Sobre Mim", href: "#sobre" },
     { name: "Artigos", href: "#artigos" },
-    { name: "Entendendo", href: "#segunda-sessao" },
+    { name: "Entendendo", href: "#primeira-sessao" },
     { name: "FAQ", href: "#faq" },
     { name: "Contato", href: "#contato" },
   ];

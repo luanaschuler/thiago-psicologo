@@ -10,7 +10,7 @@ const testimonials = [
     id: 1,
     name: "Fernanda G.",
     role: "Paciente",
-    text: "O Thiago é um excelente profissional. Desde a primeira sessão me acolheu muito bem, me senti muito a vontade e bem atendida. Ele é extremante atencioso e preocupado com o bem estar do paciente. Sempre disponível em meio as minhas crises, me ajudando da melhor forma, até mesmo a distância. Só tenho a agradecer por todo cuidado e dedicação. Super recomendo! Obrigada pelo ótimo atendimento.",
+    text: "Desde a primeira sessão me acolheu muito bem, me senti muito a vontade. Ele é extremante atencioso e preocupado com o bem estar do paciente. Sempre disponível em meio as minhas crises, me ajudando da melhor forma, até mesmo a distância. Só tenho a agradecer por todo cuidado e dedicação.",
   },
   {
     id: 2,
@@ -56,36 +56,36 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-10 flex items-center justify-center">
-          <div className="w-full max-w-3xl rounded-4xl border border-[#0c2a3d]/70 bg-[#5c8fa6] p-8 shadow-2xl backdrop-blur-3xl">
-            <div className="relative min-h-[420px] md:min-h-[320px] flex items-center justify-center">
-              {testimonials.map((t, i) => {
-                const visibilityClass = i === index ? "block" : "hidden";
-                return (
-                  <motion.blockquote
-                    key={t.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{
-                      opacity: i === index ? 1 : 0,
-                      y: i === index ? 0 : 10,
-                    }}
-                    transition={{ duration: 0.6 }}
-                    className={`${visibilityClass} flex flex-col items-center justify-center px-6 text-center ${i === index ? "" : "pointer-events-none"}`}
-                  >
-                    <p className="text-lg leading-8 text-[#0c2a3d] text-justify text-center">
-                      “{t.text}”
-                    </p>
-                    <div className="mt-6 text-center">
-                      <div className="font-semibold text-[#0c2a3d]">
-                        {t.name}
-                      </div>
-                      <div className="text-sm text-[#5c8fa6]">{t.role}</div>
-                    </div>
-                  </motion.blockquote>
-                );
-              })}
+          <div className="w-full max-w-3xl h-[620px] md:h-[480px] flex flex-col rounded-4xl border border-[#0c2a3d]/70 bg-[#5c8fa6] p-4 sm:p-6 md:p-8 shadow-2xl backdrop-blur-3xl">
+            <div className="relative flex-1 min-h-0 flex items-center justify-center">
+              {testimonials.map((t, i) => (
+                <motion.blockquote
+                  key={t.id}
+                  initial={false}
+                  animate={{
+                    opacity: i === index ? 1 : 0,
+                    y: i === index ? 0 : 10,
+                  }}
+                  transition={{ duration: 0.6 }}
+                  className={`${
+                    i === index
+                      ? "relative"
+                      : "absolute inset-0 pointer-events-none"
+                  } flex flex-col items-center justify-center overflow-y-auto w-full min-w-0 px-0 sm:px-2 text-center`}
+                >
+                  <p className="w-full min-w-0 break-words [overflow-wrap:anywhere] text-sm min-[375px]:text-base md:text-lg leading-7 md:leading-8 text-[#0c2a3d]">
+                    “{t.text}”
+                  </p>
+
+                  <div className="mt-6 text-center shrink-0">
+                    <div className="font-semibold text-[#0c2a3d]">{t.name}</div>
+                    <div className="text-sm text-[#0c2a3d]/80">{t.role}</div>
+                  </div>
+                </motion.blockquote>
+              ))}
             </div>
 
-            <div className="mt-6 flex items-center justify-center gap-3">
+            <div className="mt-6 shrink-0 flex items-center justify-center gap-3">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
@@ -96,7 +96,7 @@ export default function Testimonials() {
               ))}
             </div>
 
-            <div className="mt-8 border-t border-[#94c5de]/10 pt-6 text-center">
+            <div className="mt-8 shrink-0 border-t border-[#94c5de]/10 pt-6 text-center">
               <p className="text-sm text-[#0c2a3d]/90">
                 Veja mais avaliações no Google
               </p>

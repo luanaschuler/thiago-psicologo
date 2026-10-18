@@ -111,7 +111,7 @@ export default function MagicalNavbar() {
               p-2
             "
           >
-            {mobileMenu ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenu ? <X size={24} color="white" /> : <Menu size={24} />}
           </button>
         </div>
       </header>

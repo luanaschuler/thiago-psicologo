@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const items = [
   {
-    title: "Atenção emocional",
+    title: "Terapia Cognitivo-Comportamental (TCC)",
     description:
       "Sessões focadas em ouvir, acolher e construir um plano de cuidado individual.",
     image: "/apoiocomgatinho.jpg",

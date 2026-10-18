@@ -19,7 +19,7 @@ export default function MagicalNavbar() {
   }, []);
 
   const links = [
-    { name: "Abordagens", href: "#servicos" },
+    { name: "O que ofereço", href: "#servicos" },
     { name: "Sobre Mim", href: "#sobre" },
     { name: "Artigos", href: "#artigos" },
     { name: "Entendendo", href: "#segunda-sessao" },

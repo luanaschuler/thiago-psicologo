@@ -314,8 +314,9 @@ export default function Hero() {
                       2xl:text-4xl
                     "
                   >
-                    Atendimento psicológico focado na sua saúde mental, com
-                    acolhimento e mudança real
+                    Atendimento psicológico com abordagem
+                    cognitivo-comportamental, acolhimento e foco em mudanças
+                    significativas
                   </h1>
 
                   <p

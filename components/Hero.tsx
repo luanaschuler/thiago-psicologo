@@ -314,7 +314,8 @@ export default function Hero() {
                       2xl:text-4xl
                     "
                   >
-                    Atendimento psicológico focado na sua saúde mental, com acolhimento e mudança real
+                    Atendimento psicológico focado na sua saúde mental, com
+                    acolhimento e mudança real
                   </h1>
 
                   <p
@@ -333,8 +334,30 @@ export default function Hero() {
                       2xl:text-base
                     "
                   >
-                    Um olhar profissional e humano para apoiar sua evolução com
+                    Um olhar profissional e humano, baseado na Terapia
+                    Cognitivo-Comportamental (TCC), para apoiar sua evolução com
                     empatia e clareza
+                  </p>
+                  <p
+                    className="
+                    mt-2
+                    font-semibold
+
+                      max-w-none
+                      text-sm
+                      text-[#0c2a3d]/90
+
+                      md:mx-auto
+                      md:max-w-lg
+
+                      lg:mx-0
+                      lg:max-w-lg
+
+                      2xl:text-base
+                  "
+                  >
+                    A TCC te ajuda a entender como pensamentos, sentimentos e
+                    ações se influenciam, e como modificá-los de forma saudável
                   </p>
 
                   <div
